@@ -1,12 +1,60 @@
-#boardArea{
-    margin: 5%;
+html{
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+body{
+    margin: 0px;
+    min-height: 100vh;
+    padding-inline: 5%;
+    padding-block: 3%;
+}
+
+#gameArea{
     padding: 3%;
+    height: 100%;
+    border: 1px solid;
+    border-color: #999;
+    border-radius: 1em;
+}
+
+#boardContainer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameInfoArea{
+    padding: 3%;
+    border: 1px solid;
+    border-color: #999;
+    border-radius: 1em;
+    text-align: center;
+}
+
+#boardArea{
+    width: 65%;
+}
+
+@media (max-width:768px) {
+    #gameArea{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #boardArea{
+        padding-inline: 5%;
+    }
+}
+#boardArea{
     display: grid; 
     grid-gap: 10px;
-  }
-  
+    height: fit-content;
+}
+
 .ttt_box {
-    font-family: sans-serif;
     background-color: #ddd;
     border: 1px solid #999;
     text-align: center;
@@ -17,9 +65,37 @@
     aspect-ratio: 1/1;
 }
 
-@media (min-width: 768px) {
-    #boardArea{
-        margin-inline: 20%;
-      }
-      
-  }
+.ttt_box:hover{
+    background-color: #adadad;
+}
+
+.noHover{
+    pointer-events: none;
+}
+
+#gameOverPopupContainer{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.122);
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-content: center;
+}
+#gameOverPopup{
+    width: fit-content;
+    height: auto;
+    padding: 1em;
+    border: black solid;
+    border-radius: 1em;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+}
