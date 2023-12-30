@@ -1,0 +1,25 @@
+#boardArea{
+    margin: 5%;
+    padding: 3%;
+    display: grid; 
+    grid-gap: 10px;
+  }
+  
+.ttt_box {
+    font-family: sans-serif;
+    background-color: #ddd;
+    border: 1px solid #999;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 500%;
+    aspect-ratio: 1/1;
+}
+
+@media (min-width: 768px) {
+    #boardArea{
+        margin-inline: 20%;
+      }
+      
+  }
